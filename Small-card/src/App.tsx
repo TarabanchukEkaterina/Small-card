@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import {Button, SuperButton} from './components/Button.styled';
+import {Link} from './components/Link.styled';
+import {Menu} from './components/Menu.styled';
+import {Box} from './components/Box.styled';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  return ( 
+      <>
+      <Menu>{/* стандартная разметка  Menu*/}
+        <ul>{/* ul>li*3>a */}
+          <li><a href="">menu item 1</a></li>
+          <li><a href="">menu item 2</a></li>
+          <li><a href="">menu item 3</a></li>
+        </ul>
+      </Menu>
+        <Box>
+          {/* отображаем на основе другого компонента */}
+          <Button as={Link} href={'#'}>LinkComponent</Button>
+          {/* отображаем кнопку как ссылку чтобы не повторять стили */}
+          <Button as='a' href={'#'}>Link</Button>
+          <Button>Hello</Button>
+          <SuperButton>SuperButton</SuperButton>
+        </Box>
+      </>
   )
 }
 
-export default App
+export default App;
