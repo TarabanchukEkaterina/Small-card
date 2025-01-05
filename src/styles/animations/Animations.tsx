@@ -2,9 +2,9 @@ import { keyframes } from "styled-components";
 
 export const MyAnimation = keyframes`
   from {
-    transform: rotate(0deg);
+    background-color: #67676d2f;
   }
   to {
-    transform: rotate(360deg);
+    background-color: #57575dc3;
   }
 `
