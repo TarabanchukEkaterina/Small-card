@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Button} from './Botton.styled'
 
 export const BoxModel = styled.div`
   border-radius: 15px;
@@ -11,4 +12,8 @@ export const BoxModel = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  ${Button} {
+    cursor: grab;
+  }
 `
