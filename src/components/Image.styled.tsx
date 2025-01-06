@@ -2,16 +2,12 @@ import styled from 'styled-components'
 import {MyAnimation} from '../styles/animations/Animations'
 
 export const Image = styled.img`
-border-radius: 10px;
-width: 280px;
-height: 170px;
-`
-
-export const Fog = styled(Image)`
-  background-color: inherit;
-  position: absolute;
+  width: 280px;
+  height: 100%;
+  object-fit: cover;/* сохранение пропорций изображения от родителя */
+  border-radius: 10px;
 
   &:hover{
     animation: ${MyAnimation} 2s ease-in-out infinite;
-  } 
+  }
 `

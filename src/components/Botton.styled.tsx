@@ -2,26 +2,26 @@ import styled, { css } from "styled-components";
 
 type ButtonPropsType = {
   color?: string
+  colorHover?: string
   fontSize?: string
-  btnType: 'primary' | 'outlined'
+  btnType: 'filled' | 'outlined'
 }
 
-export const Button = styled.button<ButtonPropsType>`
+export const StyledButton = styled.button<ButtonPropsType>`
   width: 86px;
   height: 30px;
   font-weight: 700;
   font-size: ${props => props.fontSize || '10px'};
   line-height: 2;
   border-radius: 5px;
-  margin-right:10px;
 
-  ${props => props.btnType === 'primary' && css<ButtonPropsType>`
+  ${props => props.btnType === 'filled' && css<ButtonPropsType>`
     color: #fff;
     background: ${props => props.color || '#4e71fe'};
 
     &:hover {
     color: #fff;
-    background: #4aa8e6;
+    background: ${props => props.colorHover || '#4aa8e6'};
     }
   `}
   
@@ -31,8 +31,8 @@ export const Button = styled.button<ButtonPropsType>`
     border-radius: 5px;
 
     &:hover {
-      color: #4aa8e6;
-      border: 2px solid #4aa8e6;
+      color: ${props => props.colorHover || '#4aa8e6'};
+      border: 2px solid ${props => props.colorHover || '#4aa8e6'};
       border-radius: 5px;
       background-color: transparent;
     }

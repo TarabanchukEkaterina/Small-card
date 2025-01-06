@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import {MyTheme} from './MyTheme.styled'
 
 export const GlobalStyles = createGlobalStyle`
  *,
@@ -20,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Inter", sans-serif;
     line-height: 1.5;
 
-    background-color: #242424;
+    background-color: ${MyTheme.colors.grey.dark};
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
