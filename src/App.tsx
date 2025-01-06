@@ -11,10 +11,10 @@ function App() {
   
   return ( 
     <StyledCollectionCard>
-      <Card color1={MyTheme.colors.fourth} image1={northernLights} colHover={MyTheme.colors.hoverColors.fourthHover}/>
-      <Card color1={MyTheme.colors.primary} image1={desert} colHover={MyTheme.colors.hoverColors.primaryHover}/>
-      <Card color1={MyTheme.colors.secondary} image1={city} colHover={MyTheme.colors.hoverColors.secondaryHover}/>
-      <Card color1={MyTheme.colors.third} image1={fire} colHover={MyTheme.colors.hoverColors.thirdHover}/>
+      <Card colorBtn={MyTheme.colors.fourth} image={northernLights} colorHover={MyTheme.colors.hoverColors.fourthHover}/>
+      <Card colorBtn={MyTheme.colors.primary} image={desert} colorHover={MyTheme.colors.hoverColors.primaryHover}/>
+      <Card colorBtn={MyTheme.colors.secondary} image={city} colorHover={MyTheme.colors.hoverColors.secondaryHover}/>
+      <Card colorBtn={MyTheme.colors.third} image={fire} colorHover={MyTheme.colors.hoverColors.thirdHover}/>
     </StyledCollectionCard>
   )
 }

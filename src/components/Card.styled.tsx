@@ -5,19 +5,25 @@ import {StyledButton} from './Botton.styled'
 import {Image} from './Image.styled'
 import styled from 'styled-components'
 
-function Card(props: any) {
+type CardPropsType = {
+  image: string
+  colorBtn: string
+  colorHover: string
+}
+
+function Card(props: CardPropsType) {
 
   return ( 
       <BoxModel>
         <ImageConteiner>
-          <Image src={props.image1} alt="Desert"/>
+          <Image src={props.image} alt="Desert"/>
         </ImageConteiner>
         <ContentBox>
           <HeaderOne>Headline</HeaderOne>
           <HeaderTwo>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</HeaderTwo>
             <ButtonConteiner>
-              <StyledButton btnType={'filled'} color={props.color1} colorHover={props.colHover}>See more</StyledButton>
-              <StyledButton btnType={'outlined'} color={props.color1} colorHover={props.colHover}>Save</StyledButton>
+              <StyledButton btnType={'filled'} color={props.colorBtn} colorHover={props.colorHover}>See more</StyledButton>
+              <StyledButton btnType={'outlined'} color={props.colorBtn} colorHover={props.colorHover}>Save</StyledButton>
             </ButtonConteiner> 
         </ContentBox>
       </BoxModel>
